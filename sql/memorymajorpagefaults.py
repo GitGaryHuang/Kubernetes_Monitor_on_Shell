@@ -1,0 +1,3 @@
+import InfluxDBQuery
+
+InfluxDBQuery.PrintMemoryMajorPageFaults()

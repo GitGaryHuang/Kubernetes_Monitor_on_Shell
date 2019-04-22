@@ -1,0 +1,68 @@
+How To Use K8smonitor(km) Instructions
+
+Input "km -type measurement" in your bash
+Example:You can use the instruction "km -c usage" to query cpu/usage for each pod
+
+*YOU CAN ONLY CHOOSE ONE TYPE AND ONE MEASUREMENT AT THE SAME TIME.
+
+K8smonitor can query 5 types of measurements.
+-c cpu
+-f filesystem
+-m memory
+-n network
+-u uptime
+
+
+The following measurements are available for cpu query.
+usagerate		CPU usage on all cores in millicores.
+usage			Cumulative CPU usage on all cores.
+limit			CPU hard limit in millicores.
+request			CPU request (the guaranteed amount of resources) in millicores.
+nodeallocatable		Cpu allocatable of a node.
+nodecapacity		Cpu capacity of a node.
+nodereservation		Share of cpu that is reserved on the node allocatable.
+nodeutilization		CPU utilization as a share of node allocatable.
+
+
+
+The following measurements are available for filesystem query.
+inodes			The number of available inodes in a the filesystem
+inodesfree   		The number of free inodes remaining in a the filesystem.
+limit			The total size of filesystem in bytes.
+usage			Total number of bytes consumed on a filesystem.
+
+
+
+The following measurements are available for memory query.
+cache			Cache memory usage.
+limit			Memory hard limit in bytes.
+majorpagefaults		Number of major page faults.
+majorpagefaultsrate	Number of major page faults per second.
+nodeallocatable		Memory allocatable of a node.
+nodecapacity		Memory capacity of a node.
+nodereservation		Share of memory that is reserved on the node allocatable.
+nodeutilization		Memory utilization as a share of memory allocatable.
+pagefaults		Number of page faults.
+pagefaultsrate		Number of page faults per second.
+request			Memory request (the guaranteed amount of resources) in bytes.
+rss			RSS memory usage.
+usage			Total memory usage.
+workingset		Total working set usage. Working set is the memory being used and not easily dropped by the kernel.
+
+
+
+The following measurements are available for network query.
+rx			Cumulative number of bytes received over the network.
+rxerrors		Cumulative number of errors while receiving over the network.
+rxerrorsrate		Number of errors while receiving over the network per second.
+rxrate			Number of bytes received over the network per second.
+tx			Cumulative number of bytes sent over the network.
+txerrors		Cumulative number of errors while sending over the network.
+txerrorsrate		Number of errors while sending over the network.
+txrate			Number of bytes sent over the network per second.
+
+
+
+The following measurement is available for uptime query.
+uptime			Number of milliseconds since the container was started.
+

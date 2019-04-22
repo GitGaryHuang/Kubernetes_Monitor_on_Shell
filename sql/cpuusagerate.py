@@ -1,0 +1,4 @@
+import InfluxDBQuery
+
+InfluxDBQuery.PrintCpuUsageRate()
+
